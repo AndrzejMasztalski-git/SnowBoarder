@@ -412,7 +412,7 @@ GameObject:
   - component: {fileID: 556400203}
   m_Layer: 0
   m_Name: Level Sprite Shape
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1088,7 +1088,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81eedb648ca12284d9731976f94033cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  headCollider: {fileID: 0}
 --- !u!1 &1276473951
 GameObject:
   m_ObjectHideFlags: 0
