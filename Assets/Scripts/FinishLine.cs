@@ -6,8 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class FinishLine : MonoBehaviour
 {
+    [SerializeField] float winReloadDelay = 1.0f;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("YOU WON!!!");
+        if(collision.tag == "Player")
+        {
+            Invoke("ReloadScene", winReloadDelay);
+        }
+        
+    }
+
+    void ReloadScene()
+    {
+        SceneManager.LoadScene("Level1");
     }
 }

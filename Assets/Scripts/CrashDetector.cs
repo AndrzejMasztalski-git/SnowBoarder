@@ -5,15 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class CrashDetector : MonoBehaviour
 {
-    
+    [SerializeField] float lostReloadDelay = 1.0f;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Ground")
         {
-            SceneManager.LoadScene(0);
-            Debug.Log("ITS OVER ANAKIN!!!");
+            Invoke("ReloadScene", lostReloadDelay);
         }
         
     }
+
+    void ReloadScene()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    
 }
